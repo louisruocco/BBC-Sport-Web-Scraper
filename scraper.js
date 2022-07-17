@@ -14,8 +14,12 @@ const scrape = async () => {
     const info = {headline: "", description: ""};
     const $ = cheerio.load(data);
     const item = $("div#orb-modules");
-    info.headline = $(item).find("a h3.gs-c-promo-heading__title").first().text();
-    info.description = $(item).find("p").first().text();
+    info.headline = $(item).find("a h3.gs-c-promo-heading__title")
+        .first()
+        .text();
+    info.description = $(item).find("p")
+        .first()
+        .text();
 
     const transporter = nodemailer.createTransport({
         service: "gmail", 
