@@ -8,6 +8,14 @@ dotenv.config({path: "./.env"});
 
 const url = "https://www.bbc.co.uk/sport/football"
 
+const sevenAM = schedule.scheduleJob("* 7 * * *", async () => {
+    scrape();
+})
+
+const midday = schedule.scheduleJob("* 12 * * *", async () => {
+    scrape();
+})
+
 const scrape = async () => {
     const {data} = await axios.get(url);
 
@@ -61,7 +69,7 @@ const scrape = async () => {
     })
 
     const html = `
-        <h1>BBC Sport</h1>
+        <h1>Sports News:</h1>
         <h2>Top Story:</h2>
         <hr>
         <h3><a href=https://bbc.com/${mainHeadline.link}>${mainHeadline.headline}</a></h3>
@@ -72,14 +80,14 @@ const scrape = async () => {
             <li><a href="https://bbc.com/${headline2.link}">${headline2.headline}</a></li>
             <li><a href="https://bbc.com/${headline3.link}">${headline3.headline}</a></li>
             <li><a href="https://bbc.com/${headline4.link}">${headline4.headline}</a></li>
-            <li><a href="https://bbc.com/${headline5.link}">${headline5.headline}</li>
+            <li><a href="https://bbc.com/${headline5.link}">${headline5.headline}</a></li>
         </ul>
     `
 
     const options = {
         from: process.env.EMAIL,
         to: "louisruocco1@gmail.com",
-        subject: "BBC SPORT NEWS",
+        subject: `SPORTS NEWS`,
         html,
     };
 
@@ -91,5 +99,3 @@ const scrape = async () => {
         }
     })
 }
-
-scrape();
