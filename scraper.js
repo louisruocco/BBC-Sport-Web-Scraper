@@ -53,7 +53,7 @@ const scrape = async () => {
         <h1>BBC Sport</h1>
         <h2>Top Story:</h2>
         <hr>
-        <h3><a href=${mainHeadline.link}>${mainHeadline.headline}</a></h3>
+        <h3><a href=https://bbc.com/${mainHeadline.link}>${mainHeadline.headline}</a></h3>
         <p>${mainHeadline.description}</p>
         <h2>Other Stories:</h2>
         <hr>
