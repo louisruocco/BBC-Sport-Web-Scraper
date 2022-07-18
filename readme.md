@@ -1,6 +1,6 @@
-# NASA Web Scraper:
+# BBC Sport Web Scraper:
 
-A web scraper that scrapes NASA every day and sends an email to the user containing the news. Updates will be sent twice a day, one at 7am and the other at midday
+A web scraper that scrapes BBC Sport every day and sends an email to the user containing the news. Updates will be sent twice a day, one at 7am and the other at midday
 
 ## Technologies Used:
 
