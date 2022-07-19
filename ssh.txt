@@ -1,0 +1,1 @@
+ssh -i "sports-scraper.pem" ec2-user@ec2-35-176-48-24.eu-west-2.compute.amazonaws.com
