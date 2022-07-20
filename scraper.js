@@ -8,7 +8,7 @@ dotenv.config({path: "./.env"});
 
 const url = "https://www.bbc.co.uk/sport/football"
 
-const sevenAM = schedule.scheduleJob("* 7 * * *", async () => {
+const sevenAM = schedule.scheduleJob({hour: 9, minute: 0}, async () => {
     scrape();
 })
 
