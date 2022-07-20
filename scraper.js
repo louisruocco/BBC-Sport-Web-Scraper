@@ -10,11 +10,6 @@ const url = "https://www.bbc.co.uk/sport/football"
 
 const sevenAM = schedule.scheduleJob({hour: 9, minute: 0}, async () => {
     console.log("9am working");
-    // scrape();
-})
-
-const midday = schedule.scheduleJob("* 12 * * *", async () => {
-    scrape();
 })
 
 const scrape = async () => {
