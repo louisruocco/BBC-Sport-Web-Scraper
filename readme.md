@@ -9,4 +9,4 @@ A web scraper that scrapes BBC Sport every day and sends an email to the user co
 - Cheerio
 - nodemailer
 - node-schedule
-- AWS EC2
+- Deployed on Vercel
